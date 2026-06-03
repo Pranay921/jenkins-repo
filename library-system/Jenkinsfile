@@ -3,17 +3,23 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                bat 'mvn clean'
+                dir('library-system'){
+                    bat 'mvn clean'
+                }
             }
         }
         stage('test'){
             steps{
-                bat 'mvn test'
+                dir('library-system'){
+                    bat 'mvn test'
+                }
             }
         }
         stage('package'){
             steps{
-                bat 'mvn package'
+                dir('library-system'){
+                    bat 'mvn package'
+                }
             }
         }
     }
