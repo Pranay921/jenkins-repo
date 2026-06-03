@@ -1,0 +1,14 @@
+pipeline{
+    stages{
+        stage('checkout'){
+            steps{
+                echo 'repo checkout success'
+            }
+        }
+        stage('lsit files'){
+            steps{
+                bat 'dir'
+            }
+        }
+    }
+}
