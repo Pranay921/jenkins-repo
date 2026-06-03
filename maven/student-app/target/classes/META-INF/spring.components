@@ -1,0 +1,2 @@
+com.student.App=org.springframework.stereotype.Component
+com.student.GreetingController=org.springframework.stereotype.Component
